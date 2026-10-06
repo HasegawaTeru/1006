@@ -1,7 +1,7 @@
 #pragma once
 #include "EnemyData.h"
 
-struct Enemy
+class Enemy
 {
 public:
 	
