@@ -2,6 +2,7 @@
 #include <memory>
 
 class GameState;
+
 class GameManager
 {
 	std::unique_ptr<GameState> currentState;

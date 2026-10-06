@@ -54,6 +54,9 @@
     <ClCompile Include="BattleState.cpp">
       <Filter>ソース ファイル\State</Filter>
     </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
