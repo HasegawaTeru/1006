@@ -8,12 +8,13 @@ void StartUpState::OnEnter(GameManager* manager)
 
 void StartUpState::OnUpdate(GameManager* manager, float deltaTime)
 {
+	(void)_getch();
 	manager->ChangeState(std::make_unique<TitleState>());
 }
 
 void StartUpState::OnExit(GameManager* manager)
 {
-	std::cout << "スタートアップ画面を終了" << std::endl;
+	std::cout << "スタートアップ画面を終了" << std::endl << std::endl;
 }
 
 const std::string StartUpState::GetName() const
