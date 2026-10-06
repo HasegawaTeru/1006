@@ -3,11 +3,12 @@
 
 void StartUpState::OnEnter(GameManager* manager)
 {
-	std::cout << "スタートアップ画面" << std::endl;
+	std::cout << "<<<スタートアップ画面>>>" << std::endl;
 }
 
 void StartUpState::OnUpdate(GameManager* manager, float deltaTime)
 {
+	std::cout << "Press any key to continue..." << std::endl;
 	(void)_getch();
 	manager->ChangeState(std::make_unique<TitleState>());
 }
