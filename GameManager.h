@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
 #include <memory>
-#include "GameState.h"
 
 class GameState;
 class GameManager
@@ -11,8 +9,7 @@ class GameManager
 	float gameTime;
 
 public:
-
-	GameManager() : isRunning(true), gameTime(0.0f) {}
+	GameManager(std::unique_ptr<GameState> initialState);
 	void ChangeState(std::unique_ptr<GameState> newState);
 	void Update(float deltaTime);
 };
