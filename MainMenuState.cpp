@@ -3,11 +3,13 @@
 
 void MainMenuState::OnEnter(GameManager* manager)
 {
-	std::cout << "メインメニュー画面" << std::endl;
+	std::cout << "<<<メインメニュー画面>>>" << std::endl;
 }
 
 void MainMenuState::OnUpdate(GameManager* manager, float deltaTime)
 {
+	std::cout << "Press any key to start the game..." << std::endl;
+	(void)_getch();
 	manager->ChangeState(std::make_unique<InGameState>());
 }
 

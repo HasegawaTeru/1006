@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include "GameState.h"
+#include "GameManager.h"
+#include <conio.h>
 
 class MainMenuState : public GameState
 {
