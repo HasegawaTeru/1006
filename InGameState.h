@@ -3,7 +3,7 @@
 #include "GameState.h"
 #include "GameManager.h"
 
-class TitleState : public GameState
+class InGameState : public GameState
 {
 public:
 	void OnEnter(GameManager* manager);

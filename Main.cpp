@@ -1,13 +1,15 @@
 ﻿#include <iostream>
 #include "Player.h"
 #include "EnemyFactory.h"
+#include "GameManager.h"
+#include "TitleState.h"
+
+GameManager manager;
 
 int main()
 {
-	Player player1("Hero", 100, 1);
-	std::cout << "Player Name: " << player1.name << std::endl;
-	std::cout << "Player Health: " << player1.health << std::endl;
-	std::cout << "Player Level: " << player1.level << std::endl;
-
-	Enemy* enemy1 = EnemyFactory::CreateEnemy(1);
+	while (1)
+	{
+		manager.Update(0.0f);
+	}
 }
