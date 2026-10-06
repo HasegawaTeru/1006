@@ -51,6 +51,9 @@
     <ClCompile Include="EnemyFactory.cpp">
       <Filter>ソース ファイル\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="BattleState.cpp">
+      <Filter>ソース ファイル\State</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">
@@ -81,6 +84,9 @@
       <Filter>ヘッダー ファイル\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="StartUpState.h">
+      <Filter>ヘッダー ファイル\State</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleState.h">
       <Filter>ヘッダー ファイル\State</Filter>
     </ClInclude>
   </ItemGroup>
