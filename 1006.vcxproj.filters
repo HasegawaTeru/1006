@@ -42,9 +42,6 @@
     <ClCompile Include="InGameState.cpp">
       <Filter>ソース ファイル\State</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenuState.cpp">
-      <Filter>ソース ファイル\State</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>ソース ファイル\Enemy</Filter>
     </ClCompile>
@@ -69,9 +66,6 @@
       <Filter>ヘッダー ファイル\State</Filter>
     </ClInclude>
     <ClInclude Include="InGameState.h">
-      <Filter>ヘッダー ファイル\State</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenuState.h">
       <Filter>ヘッダー ファイル\State</Filter>
     </ClInclude>
     <ClInclude Include="TitleState.h">

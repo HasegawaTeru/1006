@@ -1,5 +1,5 @@
 #include "InGameState.h"
-
+#include "BattleState.h"
 
 void InGameState::OnEnter(GameManager* manager)
 {
@@ -9,6 +9,8 @@ void InGameState::OnEnter(GameManager* manager)
 void InGameState::OnUpdate(GameManager* manager, float deltaTime)
 {
 	// ゲームのロジックをここに実装
+	(void)_getch();
+	manager->ChangeState(std::make_unique<BattleState>());
 }
 
 void InGameState::OnExit(GameManager* manager)

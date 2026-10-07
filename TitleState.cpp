@@ -1,5 +1,5 @@
 #include "TitleState.h"
-#include "MainMenuState.h"
+#include "InGameState.h"
 
 void TitleState::OnEnter(GameManager* manager)
 {
@@ -9,22 +9,22 @@ void TitleState::OnEnter(GameManager* manager)
 
 void TitleState::OnUpdate(GameManager* manager, float deltaTime)
 {
-	char key;
-	std::cin >> key;
-	switch (key)
+	int key = _getch();
+	if (key == '1')
 	{
-		case '1':
-			std::cout << "ゲームスタート" << std::endl;
-			manager->ChangeState(std::make_unique<MainMenuState>());
-		case '2':
-			std::cout << "ゲーム終了" << std::endl;
-			exit(0);
+		std::cout << "ゲームスタート" << std::endl;
+		manager->ChangeState(std::make_unique<InGameState>());
+	}
+	else if (key == '2')
+	{
+		std::cout << "ゲーム終了" << std::endl;
+		exit(0);
 	}
 }
 
 void TitleState::OnExit(GameManager* manager)
 {
-	std::cout << "タイトル画面を終了" << std::endl;
+	std::cout << "タイトル画面を終了" << std::endl << std::endl;
 }
 
 const std::string TitleState::GetName() const
