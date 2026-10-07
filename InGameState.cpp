@@ -3,7 +3,7 @@
 
 void InGameState::OnEnter(GameManager* manager)
 {
-	std::cout << "ƒQ[ƒ€‰æ–Ê" << std::endl;
+	std::cout << "<<<ƒQ[ƒ€‰æ–Ê>>>" << std::endl << std::endl;
 }
 
 void InGameState::OnUpdate(GameManager* manager, float deltaTime)
@@ -28,7 +28,7 @@ void InGameState::OnUpdate(GameManager* manager, float deltaTime)
 
 void InGameState::OnExit(GameManager* manager)
 {
-	std::cout << "ƒQ[ƒ€‰æ–Ê‚ðI—¹" << std::endl;
+	std::cout << "ƒQ[ƒ€‰æ–Ê‚ðI—¹" << std::endl << std::endl;
 }
 
 const std::string InGameState::GetName() const
