@@ -85,11 +85,11 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		{
 			std::cout << "Ÿ—˜I" << std::endl;
 			player.gold += enemy->data.GOLD;
-			player.exp += enemy->data.EXP;
+			int levelupCount = player.AddExp(enemy->data.EXP);
 			std::cout << "ƒS[ƒ‹ƒhŠl“¾I" << std::endl;
 			std::cout << "ŒoŒ±’lŠl“¾I" << std::endl << std::endl;
 			std::cout << "ŠŽ‹àF" << player.gold << "ƒS[ƒ‹ƒh" << std::endl << std::endl;
-			std::cout << "ŒoŒ±’lG" << player.exp << std::endl << std::endl;
+			std::cout << "ŒoŒ±’lG" << player.exp << " / " << player.nextlevelup() << std::endl << std::endl;
 		}
 		//@ƒvƒŒƒCƒ„[‚ÌHP‚ª‚O‚É‚È‚Á‚½‚ç”s–k‚Ì•¶Žš—ñ‚ð•\Ž¦
 		else if(player.health == 0)

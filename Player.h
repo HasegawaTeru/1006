@@ -19,4 +19,25 @@ public:
 		gold = 0;
 		exp = 0;
 	}
+
+	int AddExp(int amount)
+	{
+		exp += amount;
+
+		int levelupCount = 0;
+
+		while (exp > level * 20)
+		{
+			exp -= level * 20;
+			level++;
+			levelupCount++;
+		}
+
+		return levelupCount;
+	}
+
+	int nextlevelup() const
+	{
+		return level * 20;
+	}
 };
