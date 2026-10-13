@@ -80,7 +80,10 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		//@“G‚ÌHP‚ª‚O‚É‚È‚Á‚½‚çŸ—˜‚Ì•¶š—ñ‚ğ•\¦
 		if (enemy->data.HP == 0)
 		{
-			std::cout << "Ÿ—˜I" << std::endl << std::endl;
+			std::cout << "Ÿ—˜I" << std::endl;
+			player.gold += enemy->data.GOLD;
+			std::cout << "ƒS[ƒ‹ƒhŠl“¾I" << std::endl;
+			std::cout << "Š‹àF" << player.gold << "ƒS[ƒ‹ƒh" << std::endl << std::endl;
 		}
 		//@ƒvƒŒƒCƒ„[‚ÌHP‚ª‚O‚É‚È‚Á‚½‚ç”s–k‚Ì•¶š—ñ‚ğ•\¦
 		else if(player.health == 0)
