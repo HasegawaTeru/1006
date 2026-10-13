@@ -9,6 +9,7 @@ public:
 	int health;
 	int level;
 	int gold;
+	int exp;
 
 	Player(std::string playerName, int playerHealth, int playerLevel)
 	{
@@ -16,5 +17,6 @@ public:
 		health = playerHealth;
 		level = playerLevel;
 		gold = 0;
+		exp = 0;
 	}
 };
