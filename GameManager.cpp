@@ -6,6 +6,7 @@ GameManager::GameManager(std::unique_ptr<GameState> initialState)
 	: currentState(std::move(initialState))
 	, isRunning(true)
 	, gameTime(0.0f)
+	, player("—EÒ", 30, 5)
 {
 	if (currentState)
 	{
@@ -38,4 +39,9 @@ void GameManager::Update(float deltaTime)
 	{
 		currentState->OnUpdate(this, deltaTime);
 	}
+}
+
+Player& GameManager::GetPlayer()
+{
+	return player;
 }

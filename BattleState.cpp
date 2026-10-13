@@ -13,8 +13,11 @@ void BattleState::OnEnter(GameManager* manager)
 
 void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 {
-	//　プレイヤーの名前、HP、攻撃力
-	Player player("勇者", 30, 5);
+	//　プレイヤーの設定
+	Player& player = manager->GetPlayer();
+	//　HPを毎回リセット
+	manager->GetPlayer().health = 30;
+
 	//　敵をランダムで抽選
 	int random = (rand() % 4) + 1;
 	//　敵を作成
