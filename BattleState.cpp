@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "EnemyFactory.h"
+#include "View.h"
 
 void BattleState::OnEnter(GameManager* manager)
 {
@@ -27,8 +28,8 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 	while (player.health > 0 && enemy->data.HP > 0)
 	{
 		//　プレイヤーと敵の名前、体力を文字列で表示
-		std::cout << player.name << "HP：" << player.health << std::endl << std::endl;
-		std::cout << enemy->data.name << "HP： " << enemy->data.HP << std::endl << std::endl;
+		PlayerHealthUpdate(player);
+		EnemyHealthUpdate(*enemy);
 
 		//　選択肢を文字列で表示
 		std::cout << "１キー：攻撃　　　２：ガード" << std::endl << std::endl;
