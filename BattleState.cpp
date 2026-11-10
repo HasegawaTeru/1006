@@ -85,10 +85,10 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 			PlayerWinComment();
 			player.gold += enemy->data.GOLD;
 			int levelupCount = player.AddExp(enemy->data.EXP);
-			std::cout << "ゴールド獲得！" << std::endl;
-			std::cout << "経験値獲得！" << std::endl << std::endl;
-			std::cout << "所持金：" << player.gold << "ゴールド" << std::endl << std::endl;
-			std::cout << "経験値；" << player.exp << " / " << player.nextlevelup() << std::endl << std::endl;
+			PlayerGetGoldComment(enemy->data.GOLD);
+			PlayerGetExpComment(enemy->data.EXP);
+			PlayerGoldComment(player);
+			PlayerExpComment(player);
 		}
 		//　プレイヤーのHPが０になったら敗北の文字列を表示
 		else if(player.health == 0)

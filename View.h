@@ -46,3 +46,27 @@ void PlayerLoseComment()
 {
 	std::cout << "敗北..." << std::endl;
 }
+
+//　プレイヤーがゴールドを獲得したことを表示する関数
+void PlayerGetGoldComment(int gold)
+{
+	std::cout << gold << "ゴールド獲得！" << std::endl;
+}
+
+//　プレイヤーが経験値を獲得したことを表示する関数
+void PlayerGetExpComment(int exp)
+{
+	std::cout << exp << "経験値獲得！" << std::endl;
+}
+
+//　プレイヤーの所持金を表示する関数
+void PlayerGoldComment(Player& player)
+{
+	std::cout << "所持金：" << player.gold << "ゴールド" << std::endl;
+}
+
+//　プレイヤーの経験値とレベルアップまでの経験値を表示する関数
+void PlayerExpComment(Player& player)
+{
+	std::cout << "経験値：" << player.exp << " / " << player.nextlevelup() << std::endl;
+}
