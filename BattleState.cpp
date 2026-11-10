@@ -28,8 +28,8 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 	while (player.health > 0 && enemy->data.HP > 0)
 	{
 		//　プレイヤーと敵の名前、体力を文字列で表示
-		PlayerHealthUpdate(player);
-		EnemyHealthUpdate(*enemy);
+		PlayerHealthUpdateComment(player);
+		EnemyHealthUpdateComment(*enemy);
 
 		//　選択肢を文字列で表示
 		std::cout << "１キー：攻撃　　　２：ガード" << std::endl << std::endl;
@@ -52,13 +52,13 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 			}
 
 			//　敵に与えたダメージを文字列で表示
-			EnemyDamageUpdate(*enemy, player.attack);
+			EnemyDamageUpdateComment(*enemy, player.attack);
 		}
 		//　２キーが押されたら
 		else if (key == '2')
 		{
 			//　文字列を表示
-			std::cout << "守りの姿勢をとった！" << std::endl << std::endl;
+			PlayerDefenceComment();
 			//　敵からのダメージを半分にする
 			enemyDamage /= 2;
 		}
@@ -77,12 +77,12 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		}
 
 		//　文字列の表示
-		PlayerDamageUpdate(player, enemyDamage);
+		PlayerDamageUpdateComment(player, enemyDamage);
 
 		//　敵のHPが０になったら勝利の文字列を表示
 		if (enemy->data.HP == 0)
 		{
-			std::cout << "勝利！" << std::endl;
+			PlayerWinComment();
 			player.gold += enemy->data.GOLD;
 			int levelupCount = player.AddExp(enemy->data.EXP);
 			std::cout << "ゴールド獲得！" << std::endl;
@@ -93,7 +93,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		//　プレイヤーのHPが０になったら敗北の文字列を表示
 		else if(player.health == 0)
 		{
-			std::cout << "敗北..." << std::endl << std::endl;
+			PlayerLoseComment();
 		}
 	}
 
