@@ -9,7 +9,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "EnemyFactory.h"
-#include "View.h"
+#include "BattleStateView.h"
 
 class BattleState : public GameState
 {

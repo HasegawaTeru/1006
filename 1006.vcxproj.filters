@@ -25,6 +25,12 @@
     <Filter Include="ソース ファイル\Enemy">
       <UniqueIdentifier>{67fda207-428c-44c3-a142-40890a666194}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\View">
+      <UniqueIdentifier>{4ae36eb9-610a-4c32-9f51-09df705d1714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\View">
+      <UniqueIdentifier>{ffefdc22-be69-48b9-8ade-d5fa7228d4a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -48,8 +54,17 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="View.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="InGameStateView.cpp">
+      <Filter>ソース ファイル\View</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleStateView.cpp">
+      <Filter>ソース ファイル\View</Filter>
+    </ClCompile>
+    <ClCompile Include="StartUpStateView.cpp">
+      <Filter>ソース ファイル\View</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleStateView.cpp">
+      <Filter>ソース ファイル\View</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -83,14 +98,17 @@
     <ClInclude Include="BattleState.h">
       <Filter>ヘッダー ファイル\State</Filter>
     </ClInclude>
-    <ClInclude Include="BattleController.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="BattleStateView.h">
+      <Filter>ヘッダー ファイル\View</Filter>
     </ClInclude>
-    <ClInclude Include="View.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="StartUpStateView.h">
+      <Filter>ヘッダー ファイル\View</Filter>
     </ClInclude>
-    <ClInclude Include="Model.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="TitleStateView.h">
+      <Filter>ヘッダー ファイル\View</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameStateView.h">
+      <Filter>ヘッダー ファイル\View</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

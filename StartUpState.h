@@ -4,7 +4,7 @@
 #include "GameState.h"
 #include "GameManager.h"
 #include "TitleState.h"
-#include "View.h"
+#include "StartUpStateView.h"
 
 class StartUpState : public GameState
 {
