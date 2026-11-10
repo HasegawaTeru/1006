@@ -1,5 +1,4 @@
 #include "EnemyFactory.h"
-#include "Enemy.h"
 
 const EnemyData EnemyFactory::EnemyTable[] = 
 {

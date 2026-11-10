@@ -1,5 +1,6 @@
 #pragma once
 #include "EnemyData.h"
+#include "Enemy.h"
 
 class Enemy;
 

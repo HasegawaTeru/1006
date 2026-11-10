@@ -1,6 +1,8 @@
 #pragma once
 #include <memory>
+#include <utility>
 #include "Player.h"
+#include "GameState.h"
 
 class GameState;
 

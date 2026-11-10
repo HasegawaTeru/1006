@@ -1,8 +1,10 @@
 #pragma once
 #include <iostream>
+#include <conio.h>
 #include "GameState.h"
 #include "GameManager.h"
-#include <conio.h>
+#include "TitleState.h"
+#include "View.h"
 
 class StartUpState : public GameState
 {

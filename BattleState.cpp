@@ -1,11 +1,4 @@
-#include <memory>
 #include "BattleState.h"
-#include "TitleState.h"
-#include "InGameState.h"
-#include "Player.h"
-#include "Enemy.h"
-#include "EnemyFactory.h"
-#include "View.h"
 
 void BattleState::OnEnter(GameManager* manager)
 {

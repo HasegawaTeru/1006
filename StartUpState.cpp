@@ -1,6 +1,4 @@
 #include "StartUpState.h"
-#include "TitleState.h"
-#include "View.h"
 
 void StartUpState::OnEnter(GameManager* manager)
 {

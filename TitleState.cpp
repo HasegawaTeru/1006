@@ -1,6 +1,4 @@
 #include "TitleState.h"
-#include "InGameState.h"
-#include "View.h"
 
 void TitleState::OnEnter(GameManager* manager)
 {

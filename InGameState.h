@@ -3,6 +3,8 @@
 #include <conio.h>
 #include "GameState.h"
 #include "GameManager.h"
+#include "BattleState.h"
+#include "View.h"
 
 class InGameState : public GameState
 {

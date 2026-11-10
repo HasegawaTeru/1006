@@ -1,6 +1,4 @@
 #include "InGameState.h"
-#include "BattleState.h"
-#include "View.h"
 
 void InGameState::OnEnter(GameManager* manager)
 {

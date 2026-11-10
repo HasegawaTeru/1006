@@ -1,6 +1,4 @@
 #include "GameManager.h"
-#include "GameState.h"
-#include <utility>
 
 GameManager::GameManager(std::unique_ptr<GameState> initialState)
 	: currentState(std::move(initialState))

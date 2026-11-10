@@ -1,8 +1,15 @@
 #pragma once
 #include <iostream>
+#include <memory>
 #include <conio.h>
 #include "GameState.h"
 #include "GameManager.h"
+#include "TitleState.h"
+#include "InGameState.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "EnemyFactory.h"
+#include "View.h"
 
 class BattleState : public GameState
 {
