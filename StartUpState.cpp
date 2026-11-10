@@ -1,21 +1,22 @@
 #include "StartUpState.h"
 #include "TitleState.h"
+#include "View.h"
 
 void StartUpState::OnEnter(GameManager* manager)
 {
-	std::cout << "<<<スタートアップ画面>>>" << std::endl;
+	StartUpStateComment();
 }
 
 void StartUpState::OnUpdate(GameManager* manager, float deltaTime)
 {
-	std::cout << "Press any key to continue..." << std::endl;
+	StartUpStateKeyInputComment();
 	(void)_getch();
 	manager->ChangeState(std::make_unique<TitleState>());
 }
 
 void StartUpState::OnExit(GameManager* manager)
 {
-	std::cout << "スタートアップ画面を終了" << std::endl << std::endl;
+	StartUpStateEndComment();
 }
 
 const std::string StartUpState::GetName() const

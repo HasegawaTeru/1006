@@ -6,7 +6,17 @@
 #include "GameState.h"
 
 //------------------------------------------------------------------------------------------------------
+//Å@StartUpState
+
+void StartUpStateComment();
+void StartUpStateEndComment();
+void StartUpStateKeyInputComment();
+
+//------------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------------
 //Å@TitleState
+
 void TitleStateComment();
 void TitleStateEndComment();
 void GameStartComment();
