@@ -9,7 +9,7 @@
 
 void BattleState::OnEnter(GameManager* manager)
 {
-	std::cout << "<<<バトル画面>>>" << std::endl << std::endl;
+	BattleStateComment();
 }
 
 void BattleState::OnUpdate(GameManager* manager, float deltaTime)
@@ -32,7 +32,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		EnemyHealthUpdateComment(*enemy);
 
 		//　選択肢を文字列で表示
-		std::cout << "１キー：攻撃　　　２：ガード" << std::endl << std::endl;
+		PlayerNextActionComment();
 
 		//　キー入力判定
 		int key = _getch();
@@ -100,7 +100,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 	while (true)
 	{
 		//　選択肢の文字列を表示
-		std::cout << "１キー：マップに戻る　　　２キー：タイトルに戻る" << std::endl << std::endl;
+		PlayerNextActionAfterBattleComment();
 
 		//　キー入力判定
 		int key = _getch();
@@ -124,7 +124,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 
 void BattleState::OnExit(GameManager* manager)
 {
-	std::cout << "バトル画面を終了" << std::endl << std::endl;
+	BattleStateEndComment();
 }
 
 const std::string BattleState::GetName() const

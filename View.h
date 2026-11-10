@@ -3,70 +3,23 @@
 #include "Enemy.h"
 #include "GameState.h"
 
-//　現在の
+//------------------------------------------------------------------------------------------------------
+//　BattleState
 
-//　プレイヤーのHPを表示する関数
-void PlayerHealthUpdateComment(Player& player)
-{
-	std::cout << player.name << "HP：" << player.health << std::endl << std::endl;
-}
+void BattleStateComment();
+void BattleStateEndComment();
+void PlayerHealthUpdateComment(Player& player);
+void EnemyHealthUpdateComment(Enemy& enemy);
+void EnemyDamageUpdateComment(Enemy& enemy, int damage);
+void PlayerDamageUpdateComment(Player& player, int damage);
+void PlayerDefenceComment();
+void PlayerWinComment();
+void PlayerLoseComment();
+void PlayerGetGoldComment(int gold);
+void PlayerGetExpComment(int exp);
+void PlayerGoldComment(Player& player);
+void PlayerExpComment(Player& player);
+void PlayerNextActionComment();
+void PlayerNextActionAfterBattleComment();
 
-// 敵のHPを表示する関数
-void EnemyHealthUpdateComment(Enemy& enemy)
-{
-	std::cout << enemy.data.name << "HP：" << enemy.data.HP << std::endl << std::endl;
-}
-
-//　敵に与えたダメージを表示する関数
-void EnemyDamageUpdateComment(Enemy& enemy, int damage)
-{
-	std::cout << enemy.data.name << "に" << damage << "ダメージ与えた！" << std::endl << std::endl;
-}
-
-//　プレイヤーに与えたダメージを表示する関数
-void PlayerDamageUpdateComment(Player& player, int damage)
-{
-	std::cout << player.name << "に" << damage << "ダメージ受けた！" << std::endl << std::endl;
-}
-
-//　プレイヤーが守りの姿勢をとったことを表示する関数
-void PlayerDefenceComment()
-{
-	std::cout << "守りの姿勢をとった！" << std::endl << std::endl;
-}
-
-//　プレイヤーが勝利したことを表示する関数
-void PlayerWinComment()
-{
-	std::cout << "勝利！" << std::endl;
-}
-
-//　プレイヤーが敗北したことを表示する関数
-void PlayerLoseComment()
-{
-	std::cout << "敗北..." << std::endl;
-}
-
-//　プレイヤーがゴールドを獲得したことを表示する関数
-void PlayerGetGoldComment(int gold)
-{
-	std::cout << gold << "ゴールド獲得！" << std::endl;
-}
-
-//　プレイヤーが経験値を獲得したことを表示する関数
-void PlayerGetExpComment(int exp)
-{
-	std::cout << exp << "経験値獲得！" << std::endl;
-}
-
-//　プレイヤーの所持金を表示する関数
-void PlayerGoldComment(Player& player)
-{
-	std::cout << "所持金：" << player.gold << "ゴールド" << std::endl;
-}
-
-//　プレイヤーの経験値とレベルアップまでの経験値を表示する関数
-void PlayerExpComment(Player& player)
-{
-	std::cout << "経験値：" << player.exp << " / " << player.nextlevelup() << std::endl;
-}
+//-----------------------------------------------------------------------------------------------------
