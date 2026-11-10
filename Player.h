@@ -7,14 +7,16 @@ class Player
 public:
 	std::string name;
 	int health;
+	int attack;
 	int level;
 	int gold;
 	int exp;
 
-	Player(std::string playerName, int playerHealth, int playerLevel)
+	Player(std::string playerName, int playerHealth, int playerLevel, int playerAttack)
 	{
 		name = playerName;
 		health = playerHealth;
+		attack = playerAttack;
 		level = playerLevel;
 		gold = 0;
 		exp = 0;

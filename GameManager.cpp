@@ -6,7 +6,7 @@ GameManager::GameManager(std::unique_ptr<GameState> initialState)
 	: currentState(std::move(initialState))
 	, isRunning(true)
 	, gameTime(0.0f)
-	, player("—EŽÒ", 30, 5)
+	, player("—EŽÒ", 30, 5, 10)
 {
 	if (currentState)
 	{

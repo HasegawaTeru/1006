@@ -42,10 +42,8 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		//　１キーを押したときの処理
 		if (key == '1')
 		{
-			//　プレイヤーのダメージは１０
-			int playerDamage = 10;
 			//　プレイヤーの攻撃力分敵のHPを減らす
-			enemy->data.HP -= playerDamage;
+			enemy->data.HP -= player.attack;
 
 			//　迪夫HPが０より小さくなったら０にする
 			if (enemy->data.HP < 0)
@@ -54,7 +52,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 			}
 
 			//　敵に与えたダメージを文字列で表示
-			std::cout << enemy->data.name << "に" << playerDamage << "ダメージ与えた！" << std::endl << std::endl;
+			EnemyDamageUpdate(*enemy, player.attack);
 		}
 		//　２キーが押されたら
 		else if (key == '2')
@@ -79,7 +77,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		}
 
 		//　文字列の表示
-		std::cout << enemy->data.name << "の攻撃！" << enemyDamage << "ダメージ受けた" << std::endl << std::endl;
+		PlayerDamageUpdate(player, enemyDamage);
 
 		//　敵のHPが０になったら勝利の文字列を表示
 		if (enemy->data.HP == 0)
