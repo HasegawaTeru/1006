@@ -1,7 +1,18 @@
 #pragma once
+#include <iostream>
+#include "TitleState.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "GameState.h"
+
+//------------------------------------------------------------------------------------------------------
+//Å@TitleState
+void TitleStateComment();
+void TitleStateEndComment();
+void GameStartComment();
+void GameEndComment();
+
+//------------------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------------------
 //Å@BattleState
