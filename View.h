@@ -25,6 +25,17 @@ void GameEndComment();
 //------------------------------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------------------------------
+//Å@InGameState
+
+void InGameStateComment();
+void InGameStateEndComment();
+void InGameStateExploringComment();
+void InGameStateItemGetComment();
+void InGameStateEnemyEncounterComment();
+
+//------------------------------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------------------------------
 //Å@BattleState
 
 void BattleStateComment();

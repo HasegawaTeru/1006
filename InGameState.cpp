@@ -1,9 +1,10 @@
 #include "InGameState.h"
 #include "BattleState.h"
+#include "View.h"
 
 void InGameState::OnEnter(GameManager* manager)
 {
-	std::cout << "<<<ゲーム画面>>>" << std::endl << std::endl;
+	InGameStateComment();
 }
 
 void InGameState::OnUpdate(GameManager* manager, float deltaTime)
@@ -13,22 +14,22 @@ void InGameState::OnUpdate(GameManager* manager, float deltaTime)
 	int nextState = rand() % 3;
 	if (nextState == 0)
 	{
-		std::cout << "マップを探索中..." << std::endl << std::endl;
+		InGameStateExploringComment();
 	}
 	else if (nextState == 1)
 	{
-		std::cout << "アイテムゲット！" << std::endl << std::endl;
+		InGameStateItemGetComment();
 	}
 	else
 	{
-		std::cout << "敵と目と目が合った" << std::endl << std::endl;
+		InGameStateEnemyEncounterComment();
 		manager->ChangeState(std::make_unique<BattleState>());
 	}
 }
 
 void InGameState::OnExit(GameManager* manager)
 {
-	std::cout << "ゲーム画面を終了" << std::endl << std::endl;
+	InGameStateEndComment();
 }
 
 const std::string InGameState::GetName() const
