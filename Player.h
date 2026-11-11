@@ -1,10 +1,13 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "Enemy.h"
 
 class Player
 {
 public:
+	const int PLAYER_HP_MAX = 30;
+
 	std::string name;
 	int health;
 	int attack;
@@ -12,34 +15,13 @@ public:
 	int gold;
 	int exp;
 
-	Player(std::string playerName, int playerHealth, int playerLevel, int playerAttack)
-	{
-		name = playerName;
-		health = playerHealth;
-		attack = playerAttack;
-		level = playerLevel;
-		gold = 0;
-		exp = 0;
-	}
+	Player(std::string playerName, int playerHealth, int playerLevel, int playerAttack);
 
-	int AddExp(int amount)
-	{
-		exp += amount;
+	int AddExp(int amount);
 
-		int levelupCount = 0;
+	int nextlevelup() const;
 
-		while (exp > level * 20)
-		{
-			exp -= level * 20;
-			level++;
-			levelupCount++;
-		}
+	void EnemyHpDecrease(Enemy& enemy, int playerAttack);
 
-		return levelupCount;
-	}
-
-	int nextlevelup() const
-	{
-		return level * 20;
-	}
+	void TakeDamage(int damage);
 };

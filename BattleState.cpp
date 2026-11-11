@@ -10,10 +10,10 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 	//　プレイヤーの設定
 	Player& player = manager->GetPlayer();
 	//　HPを毎回リセット
-	manager->GetPlayer().health = 30;
+	manager->GetPlayer().health = player.PLAYER_HP_MAX;
 
 	//　敵をランダムで抽選
-	int random = (rand() % 4) + 1;
+	int random = RandomEnemySelection();
 	//　敵を作成
 	std::unique_ptr<Enemy> enemy(EnemyFactory::CreateEnemy(random));
 
@@ -35,14 +35,8 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		//　１キーを押したときの処理
 		if (key == '1')
 		{
-			//　プレイヤーの攻撃力分敵のHPを減らす
-			enemy->data.HP -= player.attack;
-
-			//　迪夫HPが０より小さくなったら０にする
-			if (enemy->data.HP < 0)
-			{
-				enemy->data.HP = 0;
-			}
+			//敵のHPをプレイヤーの攻撃力分減らす
+			player.EnemyHpDecrease(*enemy, player.attack);
 
 			//　敵に与えたダメージを文字列で表示
 			EnemyDamageUpdateComment(*enemy, player.attack);
@@ -73,7 +67,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 		PlayerDamageUpdateComment(player, enemyDamage);
 
 		//　敵のHPが０になったら勝利の文字列を表示
-		if (enemy->data.HP == 0)
+		if (enemy->data.HP <= 0)
 		{
 			PlayerWinComment();
 			player.gold += enemy->data.GOLD;
@@ -84,7 +78,7 @@ void BattleState::OnUpdate(GameManager* manager, float deltaTime)
 			PlayerExpComment(player);
 		}
 		//　プレイヤーのHPが０になったら敗北の文字列を表示
-		else if(player.health == 0)
+		else if(player.health <= 0)
 		{
 			PlayerLoseComment();
 		}

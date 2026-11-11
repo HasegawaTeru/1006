@@ -10,6 +10,7 @@
 #include "Enemy.h"
 #include "EnemyFactory.h"
 #include "BattleStateView.h"
+#include "BattleStateModel.h"
 
 class BattleState : public GameState
 {

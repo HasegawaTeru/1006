@@ -124,11 +124,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BattleState.cpp" />
+    <ClCompile Include="BattleStateModel.cpp" />
     <ClCompile Include="EnemyFactory.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="InGameState.cpp" />
     <ClCompile Include="InGameStateView.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="StartUpState.cpp" />
     <ClCompile Include="StartUpStateView.cpp" />
     <ClCompile Include="TitleState.cpp" />
@@ -137,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleState.h" />
+    <ClInclude Include="BattleStateModel.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyData.h" />
     <ClInclude Include="EnemyFactory.h" />
