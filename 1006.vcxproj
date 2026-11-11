@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="BattleState.cpp" />
     <ClCompile Include="BattleStateModel.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyFactory.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="InGameState.cpp" />
