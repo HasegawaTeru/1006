@@ -1,5 +1,6 @@
 #include "BattleState.h"
 
+
 void BattleState::OnEnter(GameManager* manager)
 {
 	BattleStateComment();
